@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="firstApp">
+<head>
+    <meta charset="UTF-8">
+    <!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>-->
+    <!--For declaring controllers-->
+
+
+    <title>Title</title>
+</head>
+<body>
+<div ng-controller="FirstController">
+
+    <h1>{{someObject.info}}</h1>
+    <h3>ng-model directive</h3>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" ng-model="nameText"/>
+
+    <div class="container" data-ng-init="names=['Napur','Heedy','Shriva','Dave']">
+
+        <h3>ng-repeat Directive</h3>
+
+        <ul>
+            <li data-ng-repeat="name in names | filter: nameText | orderBy: name">{{name| uppercase }}</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div ng-controller='SimpleController'>
+    <h3>Customers</h3>
+    <ul>
+        <li ng-repeat=" cust in customers ">{{cust.name}}</li>
+    </ul>
+
+</div>
+
+
+
+<script src="../js/angular.min.js"></script>
+<script src="../controllers/firstApp.js"></script>
+</body>
+</html>

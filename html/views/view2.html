@@ -1,0 +1,8 @@
+<label for="name">Name</label>
+<input type="text" id="name" ng-model="name">
+
+
+<h3>Customers</h3>
+<ul>
+    <li ng-repeat=" cust in customers| filter: name ">{{cust.name | uppercase}}</li>
+</ul>

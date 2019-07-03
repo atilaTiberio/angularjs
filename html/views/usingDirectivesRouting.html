@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoApp">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+
+<div ng-view="">
+
+</div>
+
+<!--
+The legal restrict values are:
+
+E for Element name
+A for Attribute
+C for Class
+M for Comment
+By default the value is EA, meaning that both Element names and attribute names can invoke the directive.
+-->
+
+<!--<h3-new-directive> </h3-new-directive>-->
+<!--as an attribute
+<div h3-new-directive></div>
+-->
+<!--as a class in directive declaration restrict:C should be added-->
+<!-- <div class="h3-new-directive"></div>-->
+
+<!--as a comment, restrict:M and replace: true a space is required -->
+
+<!-- directive: h3-new-directive -->
+
+<h1>aa</h1>
+<a dom-directive="" >Link </a>
+<br/>
+<a href="#!/partial1"> view 1</a> | <a href="#!/partial2"> view 2</a>
+<script src="../js/angular.min.js"></script>
+<script src="../js/angular-route.js"></script>
+<script src="../controllers/appWithRouting.js"></script>
+</body>
+</html>
